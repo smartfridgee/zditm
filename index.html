@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przystanki Zditm</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <br>
+    <div class="schedules">
+        <div class="block">
+            <select id="rj1_input" onchange="changeStop(event, 1)"></select>
+            <iframe id="rj1" data-stop="11535" src="https://www.zditm.szczecin.pl/pl/pasazer/rozklady-jazdy,tablica,slupek,11535" frameborder="0"></iframe>
+        </div>
+        <div class="block">
+            <select id="rj2_input" onchange="changeStop(event, 2)"></select>
+            <iframe id="rj2" data-stop="11542" src="https://www.zditm.szczecin.pl/pl/pasazer/rozklady-jazdy,tablica,slupek,11542" frameborder="0"></iframe>
+        </div>
+        <div class="add">
+            <p>Dodaj przystanek</p>
+            <br>
+            Numer przystanku: <input type="text" id="new_number">
+            <br><br>
+            Nazwa przystanku: <input type="text" id="new_name">
+            <br><br>
+            <button onclick="addNewStop()">Dodaj</button>
+        </div>
+        <div class="add">
+            <p>Usuń przystanek</p>
+            <br>
+            Numer przystanku: <input type="text" id="del_number">
+            <br><br>
+            <button onclick="deleteStop()">Usuń</button>
+            <br><br>
+        </div>
+        <br><br>
+        <div class="add">
+            <button onclick="clearData()">Reset Data</button>
+        </div>
+    </div>
+</body>
+</html>
